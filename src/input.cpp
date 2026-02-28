@@ -53,9 +53,11 @@ void InputHandler::handleEvent(const sf::Event& event) {
 void InputHandler::update(float dt) {
     for (int i = 0; i < ACTION_COUNT; ++i) {
         auto& s = m_states[i];
-        // justPressed only lasts one frame
+
+        // Carry justPressed (set by handleEvent) into firedThisFrame,
+        // then clear justPressed so it doesn't persist past this frame.
+        s.firedThisFrame = s.justPressed;
         s.justPressed    = false;
-        s.firedThisFrame = false;
 
         if (s.held && usesDAS(static_cast<Action>(i))) {
             s.holdTimer += dt;
@@ -67,17 +69,23 @@ void InputHandler::update(float dt) {
                     s.dasTimer = 0.f;
                 }
             }
+        } else if (!s.held) {
+            s.holdTimer = 0.f;
+            s.dasActive = false;
+            s.dasTimer  = 0.f;
         }
     }
 }
 
 bool InputHandler::isJustPressed(Action a) const {
-    return m_states[static_cast<int>(a)].justPressed;
+    // firedThisFrame is true on first press; for DAS actions it's also true
+    // on repeats, but isJustPressed is only called for non-DAS actions.
+    const auto& s = m_states[static_cast<int>(a)];
+    return s.firedThisFrame && !s.dasActive;
 }
 
 bool InputHandler::isActive(Action a) const {
-    const auto& s = m_states[static_cast<int>(a)];
-    return s.justPressed || s.firedThisFrame;
+    return m_states[static_cast<int>(a)].firedThisFrame;
 }
 
 bool InputHandler::isHeld(Action a) const {

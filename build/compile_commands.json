@@ -1,0 +1,38 @@
+[
+{
+  "directory": "/Users/hugh/repos/tetris/build",
+  "command": "/usr/bin/c++  -I/Users/hugh/repos/tetris/src -isystem /opt/homebrew/include -O3 -DNDEBUG -std=gnu++17 -arch arm64 -o CMakeFiles/tetris.dir/src/main.cpp.o -c /Users/hugh/repos/tetris/src/main.cpp",
+  "file": "/Users/hugh/repos/tetris/src/main.cpp",
+  "output": "CMakeFiles/tetris.dir/src/main.cpp.o"
+},
+{
+  "directory": "/Users/hugh/repos/tetris/build",
+  "command": "/usr/bin/c++  -I/Users/hugh/repos/tetris/src -isystem /opt/homebrew/include -O3 -DNDEBUG -std=gnu++17 -arch arm64 -o CMakeFiles/tetris.dir/src/game.cpp.o -c /Users/hugh/repos/tetris/src/game.cpp",
+  "file": "/Users/hugh/repos/tetris/src/game.cpp",
+  "output": "CMakeFiles/tetris.dir/src/game.cpp.o"
+},
+{
+  "directory": "/Users/hugh/repos/tetris/build",
+  "command": "/usr/bin/c++  -I/Users/hugh/repos/tetris/src -isystem /opt/homebrew/include -O3 -DNDEBUG -std=gnu++17 -arch arm64 -o CMakeFiles/tetris.dir/src/board.cpp.o -c /Users/hugh/repos/tetris/src/board.cpp",
+  "file": "/Users/hugh/repos/tetris/src/board.cpp",
+  "output": "CMakeFiles/tetris.dir/src/board.cpp.o"
+},
+{
+  "directory": "/Users/hugh/repos/tetris/build",
+  "command": "/usr/bin/c++  -I/Users/hugh/repos/tetris/src -isystem /opt/homebrew/include -O3 -DNDEBUG -std=gnu++17 -arch arm64 -o CMakeFiles/tetris.dir/src/tetromino.cpp.o -c /Users/hugh/repos/tetris/src/tetromino.cpp",
+  "file": "/Users/hugh/repos/tetris/src/tetromino.cpp",
+  "output": "CMakeFiles/tetris.dir/src/tetromino.cpp.o"
+},
+{
+  "directory": "/Users/hugh/repos/tetris/build",
+  "command": "/usr/bin/c++  -I/Users/hugh/repos/tetris/src -isystem /opt/homebrew/include -O3 -DNDEBUG -std=gnu++17 -arch arm64 -o CMakeFiles/tetris.dir/src/renderer.cpp.o -c /Users/hugh/repos/tetris/src/renderer.cpp",
+  "file": "/Users/hugh/repos/tetris/src/renderer.cpp",
+  "output": "CMakeFiles/tetris.dir/src/renderer.cpp.o"
+},
+{
+  "directory": "/Users/hugh/repos/tetris/build",
+  "command": "/usr/bin/c++  -I/Users/hugh/repos/tetris/src -isystem /opt/homebrew/include -O3 -DNDEBUG -std=gnu++17 -arch arm64 -o CMakeFiles/tetris.dir/src/input.cpp.o -c /Users/hugh/repos/tetris/src/input.cpp",
+  "file": "/Users/hugh/repos/tetris/src/input.cpp",
+  "output": "CMakeFiles/tetris.dir/src/input.cpp.o"
+}
+]
